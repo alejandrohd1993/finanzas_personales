@@ -1,0 +1,12 @@
+body {
+    padding-top: 20px;
+    background-color: aqua;
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
