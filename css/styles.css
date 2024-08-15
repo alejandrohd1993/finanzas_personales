@@ -1,0 +1,11 @@
+body {
+    padding-top: 20px;
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
