@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($row = $result->fetch_assoc()) {
         if (password_verify($password, $row['password_hash'])) {
             session_start();
-            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['id'] = $row['id'];
             header("Location: dashboard.php");
             exit();
         } else {
@@ -33,11 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <div class="container mt-5 justify-content-center">
+    <div class="container mt-5">
         <h1 class="text-center">Iniciar Sesión</h1>
         <?php if (isset($error)) { ?>
             <div class="alert alert-danger">
